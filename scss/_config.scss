@@ -2,6 +2,9 @@
 
 $primary-color: #444;
 $seconday-color: #f74a06;
+
+$primary-color2: #5dbcd2;
+
 $show-home-image: true;
 $home-image: url(../img/programming-banner.jpg);
 $background-opacaity: 0.5;
@@ -40,6 +43,15 @@ $background-opacaity: 0.5;
         z-index: -1;
       }
     }
+  }
+}
+
+// Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
